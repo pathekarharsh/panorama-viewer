@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap");
+
+body {
+  margin: 0;
+  font-family: "Orbitron", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #111;
+}
+
+body h1{
+    flex: 1;
+    text-align: center;
+    color: #fff;
+    font-family: "Raleway", sans-serif;
+    text-transform: uppercase;
+    font-size: 40px;
+    font-weight: 800;
+    letter-spacing: 5px;
+    z-index: 100;
+    pointer-events: none;
+    overflow: hidden; /* Hide overflow to create the typing effect */
+    white-space: nowrap; /* Prevent text from wrapping */
+    border-right: 0.15em solid #fff; /* Create a blinking cursor effect */
+    animation: typing 2s steps(30, end), blink-caret 0.5s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 1%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #fff;
+  }
+}
+
+#panoramaContainer {
+  width: 100%;
+  max-width: 800px;
+  height: 500px;
+}
+
+#buttonContainer{
+    padding: 1rem;
+}
+
+#uploadButton {
+  padding: 12px 32px;
+  font-size: 1rem;
+  background-color: #865DFF;
+  color: #222;
+  border: 1px solid #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#uploadButton:hover {
+  background-color: transparent;
+  color: #fff;
+  transition: 0.2s;
+}
